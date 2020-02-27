@@ -165,8 +165,18 @@ doc.text('SOLICITUD DE CERTIFICACIÓN EN MEDICINA GENERAL', 245, 60, {
 });
 
 doc.fontSize(10);
-date = '5 de Diciembre del 2020'
-doc.text(date, 70, 150, {
+const date = new Date();
+
+const year = date.getFullYear().toString();
+
+const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio',
+         'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+
+const month = months[date.getMonth()];
+
+const day = date.getDate().toString();
+
+doc.text(day + ' de ' + month + ' del ' + year, 70, 150, {
   align: 'right'
 });
 
